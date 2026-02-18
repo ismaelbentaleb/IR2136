@@ -11,7 +11,7 @@ def generate_launch_description():
     # =====================
     # Rutas
     # =====================
-    ardupilot_gazebo = os.path.expanduser('~/ardupilot_gazebo')
+    ardupilot_gazebo = os.path.expanduser('~/Documentos/GitHub/IR2136/ardupilot_gazebo')
     world_path = os.path.join(
         ardupilot_gazebo,
         'worlds',
