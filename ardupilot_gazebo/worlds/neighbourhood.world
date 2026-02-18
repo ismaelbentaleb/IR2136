@@ -3349,5 +3349,10 @@
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+    <include>
+    	<uri>model://iris_with_ardupilot</uri>
+    	<name>drone1</name>
+    	<pose>0 0 2 0 0 0</pose>
+  	</include>
   </world>
 </sdf>

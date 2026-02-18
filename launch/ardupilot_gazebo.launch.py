@@ -35,7 +35,7 @@ def generate_launch_description():
     # =====================
     leader_sitl = ExecuteProcess(
         cmd=[
-            'sim_vehicle.py',
+            os.path.expanduser('~/ardupilot/Tools/autotest/sim_vehicle.py'),
             '-v', 'ArduCopter',
             '-f', 'gazebo-iris',
             '--console',
@@ -52,7 +52,7 @@ def generate_launch_description():
         cmd=[
             'python3',
             os.path.expanduser(
-                '~/Documentos/GitHub/IR2136/launch/auto_takeoff.py'
+                '~/Documentos/GitHub/IR2136/mission_control/auto_takeoff.py'
             )
         ],
         output='screen'
