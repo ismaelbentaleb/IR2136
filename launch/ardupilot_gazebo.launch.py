@@ -52,7 +52,7 @@ def generate_launch_description():
         cmd=[
             'python3',
             os.path.expanduser(
-                '~/cambio/src/drone_mission/scripts/auto_takeoff.py'
+                '~/Documentos/GitHub/IR2136/launch/auto_takeoff.py'
             )
         ],
         output='screen'
