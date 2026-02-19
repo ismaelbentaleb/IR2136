@@ -3351,7 +3351,7 @@
     </gui>
     <include>
     	<uri>model://iris_with_ardupilot</uri>
-    	<name>drone1</name>
+    	<name>iris_demo</name>
     	<pose>0 0 2 0 0 0</pose>
   	</include>
   </world>

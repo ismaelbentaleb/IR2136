@@ -67,9 +67,9 @@ def generate_launch_description():
         ),
 
         SetEnvironmentVariable(
-            name='GAZEBO_PLUGIN_PATH',
-            value=os.path.join(ardupilot_gazebo, 'build')
-        ),
+    		name='GAZEBO_PLUGIN_PATH',
+    		value=os.path.expanduser('~/ardupilot_gazebo/build/lib')
+		),
 
 
         # Orden correcto
