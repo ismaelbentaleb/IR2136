@@ -68,7 +68,7 @@ def generate_launch_description():
 
         SetEnvironmentVariable(
     		name='GAZEBO_PLUGIN_PATH',
-    		value=os.path.expanduser('~/ardupilot_gazebo/build/lib')
+    		value=os.path.expanduser('~/ardupilot_gazebo/build/')
 		),
 
 

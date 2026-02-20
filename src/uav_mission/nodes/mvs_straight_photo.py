@@ -287,9 +287,10 @@ class MVSPhotoMission(Node):
 
         if self.phase == "TAKEOFF_WAIT":
             if time.time() - self._takeoff_t0 >= TAKEOFF_WAIT_S:
-                self.yaw_plus_90()
-                self._yaw_t0 = time.time()
-                self.phase = "YAW_WAIT"
+                #self.yaw_plus_90()
+                self.get_logger().info("Starting straight cruise + photo capture ✅")
+                self.cruise_enabled = True
+                self.phase = "CRUISE"
             return
 
         if self.phase == "YAW_WAIT":
