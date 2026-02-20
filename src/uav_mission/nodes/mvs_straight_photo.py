@@ -5,7 +5,6 @@ import os
 import csv
 import time
 import math
-from dataclasses import dataclass
 from typing import Optional, Tuple
 
 import numpy as np
@@ -35,7 +34,7 @@ TAKEOFF_WAIT_S = 8.0              # time to stabilize after takeoff
 CAMERA_TOPIC = "/camera/image_raw"
 
 # Output folder for photos
-OUTPUT_DIR = os.path.expanduser("~/uav_photos")
+OUTPUT_DIR = os.path.expanduser("~/Documentos/GitHub/IR2136/data/incoming")
 
 
 # =========================
@@ -61,7 +60,7 @@ class MVSPhotoMission(Node):
         self.csv_path = os.path.join(OUTPUT_DIR, "log.csv")
         self.csv_file = open(self.csv_path, "w", newline="")
         self.csv_writer = csv.writer(self.csv_file)
-        self.csv_writer.writerow(["timestamp", "local_x", "local_y", "local_z", "photo_file"])
+        self.csv_writer.writerow(["timestamp", "latitude", "longitude", "altitude", "photo_file"])
 
         # --- camera ---
         self.bridge = CvBridge()
@@ -74,11 +73,11 @@ class MVSPhotoMission(Node):
         self.m.wait_heartbeat()
         self.get_logger().info("Heartbeat received ✅")
 
-        # Ask for local position stream
+        # Ask for GPS data stream (lat, lon, alt)
         self.m.mav.request_data_stream_send(
             self.m.target_system,
             self.m.target_component,
-            mavutil.mavlink.MAV_DATA_STREAM_POSITION,
+            mavutil.mavlink.MAV_DATA_STREAM_RAW_SENSORS,
             10, 1
         )
 
@@ -178,6 +177,19 @@ class MVSPhotoMission(Node):
             self.last_local = (float(msg.x), float(msg.y), float(msg.z))
         return self.last_local
 
+    def poll_gps_position(self) -> Optional[Tuple[float, float, float]]:
+        """
+        GPS_RAW_INT provides lat, lon, and alt in degrees and meters.
+        """
+        msg = self.m.recv_match(type="GPS_RAW_INT", blocking=False)
+        if msg:
+            # Convert lat, lon to decimal degrees
+            lat = msg.lat / 1e7  # Latitude is in 1e7 degrees
+            lon = msg.lon / 1e7  # Longitude is in 1e7 degrees
+            alt = msg.alt / 1000.0  # Altitude in meters
+            return lat, lon, alt
+        return None
+
     # =========================
     # MAVLink setpoint: velocity in BODY frame
     # =========================
@@ -243,8 +255,15 @@ class MVSPhotoMission(Node):
         fname = f"photo_{self.photo_idx:04d}_{int(ts)}.png"
         fpath = os.path.join(OUTPUT_DIR, fname)
 
+        # Get GPS position (lat, lon, alt)
+        gps = self.poll_gps_position()
+        if gps:
+            lat, lon, alt = gps
+        else:
+            lat, lon, alt = 0.0, 0.0, 0.0  # Default if no GPS data
+
         cv2.imwrite(fpath, cv_img)
-        self.csv_writer.writerow([f"{ts:.3f}", f"{x:.3f}", f"{y:.3f}", f"{z:.3f}", fname])
+        self.csv_writer.writerow([f"{ts:.3f}", f"{lat:.7f}", f"{lon:.7f}", f"{alt:.2f}", fname])
         self.csv_file.flush()
 
         self.get_logger().info(f"📸 Saved {fname} (every {PHOTO_EVERY_M}m)")
