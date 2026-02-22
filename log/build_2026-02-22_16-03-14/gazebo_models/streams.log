@@ -1,0 +1,130 @@
+[0.037s] Invoking command in '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models': /usr/bin/cmake /home/elena/Documentos/GitHub/IR2136/gazebo_models-master -DCMAKE_INSTALL_PREFIX=/home/elena/Documentos/GitHub/IR2136/install/gazebo_models
+[0.540s] -- The C compiler identification is GNU 11.4.0
+[0.541s] -- The CXX compiler identification is GNU 11.4.0
+[0.541s] -- Detecting C compiler ABI info
+[0.541s] -- Detecting C compiler ABI info - done
+[0.541s] -- Check for working C compiler: /usr/lib/ccache/cc - skipped
+[0.541s] -- Detecting C compile features
+[0.541s] -- Detecting C compile features - done
+[0.541s] -- Detecting CXX compiler ABI info
+[0.541s] -- Detecting CXX compiler ABI info - done
+[0.541s] -- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped
+[0.541s] -- Detecting CXX compile features
+[0.542s] -- Detecting CXX compile features - done
+[0.542s] -- Install path: /home/elena/Documentos/GitHub/IR2136/install/gazebo_models/models
+[0.542s] -- Configuring done
+[0.542s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.543s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[0.543s]   CMake.
+[0.543s] 
+[0.543s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[0.543s]   CMake that the project does not need compatibility with older versions.
+[0.543s] 
+[0.543s] [0m
+[0.590s] -- Generating done
+[0.633s] -- Build files have been written to: /home/elena/Documentos/GitHub/IR2136/build/gazebo_models
+[0.781s] Invoked command in '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models' returned '0': /usr/bin/cmake /home/elena/Documentos/GitHub/IR2136/gazebo_models-master -DCMAKE_INSTALL_PREFIX=/home/elena/Documentos/GitHub/IR2136/install/gazebo_models
+[0.784s] Invoking command in '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models': /usr/bin/cmake --build /home/elena/Documentos/GitHub/IR2136/build/gazebo_models -- -j20 -l20
+[0.873s] tar: tar: Removing leading `../' from member namestar: Removing leading `../' from member namesRemoving leading `../' from member names
+[0.873s] 
+[0.873s] 
+[0.873s] tar: ../apartment: Cannot stattar: ../arrow_red: Cannot stattar: Removing leading `../' from member names
+[0.873s] tar: ../apollo15_landing_site_1000x1000: Cannot stat: No such file or directory: No such file or directory
+[0.874s] 
+[0.874s] : No such file or directory
+[0.875s] tar: Removing leading `../' from member names
+[0.875s] tar: ../arm_part: Cannot stat: No such file or directory
+[0.875s] tar: ../beer: Cannot stat: No such file or directory
+[0.875s] tar: tar: Removing leading `../' from member names
+[0.875s] tar: ../asus_xtion_pro_camera: Cannot stat: No such file or directory
+[0.875s] Removing leading `../' from member names
+[0.875s] tar: ../ambulance: Cannot stattar: : No such file or directory
+[0.875s] Exiting with failure status due to previous errors
+[0.876s] tar: Removing leading `../' from member names
+[0.876s] tar: ../bin_4_dropping_task: Cannot statgmake[2]: *** [CMakeFiles/arrow_red.dir/build.make:71: CMakeFiles/arrow_red] Error 2
+[0.876s] : No such file or directory
+[0.877s] tar: Exiting with failure status due to previous errors
+[0.877s] tar: Removing leading `../' from member names
+[0.877s] tar: Exiting with failure status due to previous errors
+[0.877s] gmake[2]: *** [CMakeFiles/ambulance.dir/build.make:71: CMakeFiles/ambulance] Error 2
+[0.877s] gmake[2]: *** [CMakeFiles/arm_part.dir/build.make:71: CMakeFiles/arm_part] Error 2
+[0.877s] tar: tar: ../ball_bearing: Cannot statExiting with failure status due to previous errors
+[0.877s] tar: : No such file or directoryExiting with failure status due to previous errors
+[0.877s] 
+[0.877s] gmake[2]: *** [CMakeFiles/apollo15_landing_site_1000x1000.dir/build.make:71: CMakeFiles/apollo15_landing_site_1000x1000] Error 2
+[0.877s] gmake[2]: *** [CMakeFiles/apartment.dir/build.make:71: CMakeFiles/apartment] Error 2
+[0.877s] tar: Exiting with failure status due to previous errors
+[0.877s] tar: Exiting with failure status due to previous errors
+[0.877s] gmake[2]: *** [CMakeFiles/asus_xtion_pro_camera.dir/build.make:71: CMakeFiles/asus_xtion_pro_camera] Error 2
+[0.879s] gmake[2]: *** [CMakeFiles/beer.dir/build.make:71: CMakeFiles/beer] Error 2
+[0.879s] tar: Removing leading `../' from member names
+[0.879s] tar: ../asphalt_plane: Cannot stat: No such file or directory
+[0.879s] tar: Removing leading `../' from member names
+[0.879s] tar: ../bookshelf: Cannot stat: No such file or directory
+[0.879s] tar: Exiting with failure status due to previous errors
+[0.879s] tar: Removing leading `../' from member names
+[0.880s] gmake[2]: *** [CMakeFiles/ball_bearing.dir/build.make:71: CMakeFiles/ball_bearing] Error 2
+[0.880s] tar: ../box_target_green: Cannot stat: No such file or directory
+[0.880s] tar: Exiting with failure status due to previous errors
+[0.880s] tar: Exiting with failure status due to previous errors
+[0.880s] gmake[2]: *** [CMakeFiles/bin_4_dropping_task.dir/build.make:71: CMakeFiles/bin_4_dropping_task] Error 2
+[0.880s] gmake[2]: *** [CMakeFiles/asphalt_plane.dir/build.make:71: CMakeFiles/asphalt_plane] Error 2
+[0.880s] tar: Exiting with failure status due to previous errors
+[0.881s] tar: Removing leading `../' from member names
+[0.881s] tar: ../bowl: Cannot stat: No such file or directory
+[0.882s] gmake[2]: *** [CMakeFiles/bookshelf.dir/build.make:71: CMakeFiles/bookshelf] Error 2
+[0.882s] gmake[1]: *** [CMakeFiles/Makefile2:619: CMakeFiles/apartment.dir/all] Error 2
+[0.882s] gmake[1]: *** Waiting for unfinished jobs....
+[0.882s] gmake[1]: *** [CMakeFiles/Makefile2:593: CMakeFiles/ambulance.dir/all] Error 2
+[0.882s] gmake[1]: *** [CMakeFiles/Makefile2:645: CMakeFiles/apollo15_landing_site_1000x1000.dir/all] Error 2
+[0.882s] gmake[1]: *** [CMakeFiles/Makefile2:671: CMakeFiles/arm_part.dir/all] Error 2
+[0.882s] gmake[1]: *** [CMakeFiles/Makefile2:697: CMakeFiles/arrow_red.dir/all] Error 2
+[0.882s] gmake[1]: *** [CMakeFiles/Makefile2:723: CMakeFiles/asphalt_plane.dir/all] Error 2
+[0.883s] gmake[1]: *** [CMakeFiles/Makefile2:749: CMakeFiles/asus_xtion_pro_camera.dir/all] Error 2
+[0.883s] gmake[1]: *** [CMakeFiles/Makefile2:801: CMakeFiles/beer.dir/all] Error 2
+[0.883s] gmake[1]: *** [CMakeFiles/Makefile2:775: CMakeFiles/ball_bearing.dir/all] Error 2
+[0.883s] gmake[1]: *** [CMakeFiles/Makefile2:827: CMakeFiles/bin_4_dropping_task.dir/all] Error 2
+[0.883s] gmake[1]: *** [CMakeFiles/Makefile2:853: CMakeFiles/bookshelf.dir/all] Error 2
+[0.884s] tar: Removing leading `../' from member names
+[0.884s] tar: Removing leading `../' from member namestar: 
+[0.884s] ../box_target_red: Cannot stattar: ../breakable_test: Cannot stat: No such file or directory
+[0.884s] : No such file or directory
+[0.884s] tar: Exiting with failure status due to previous errors
+[0.884s] tar: Exiting with failure status due to previous errors
+[0.884s] gmake[2]: *** [CMakeFiles/box_target_green.dir/build.make:71: CMakeFiles/box_target_green] Error 2
+[0.884s] tar: Removing leading `../' from member names
+[0.884s] tar: ../brick_box_3x1x3: Cannot stat: No such file or directory
+[0.884s] gmake[1]: *** [CMakeFiles/Makefile2:905: CMakeFiles/box_target_green.dir/all] Error 2
+[0.884s] gmake[2]: *** [CMakeFiles/bowl.dir/build.make:71: CMakeFiles/bowl] Error 2
+[0.884s] gmake[1]: *** [CMakeFiles/Makefile2:879: CMakeFiles/bowl.dir/all] Error 2
+[0.885s] tar: Exiting with failure status due to previous errors
+[0.885s] tar: tar: Removing leading `../' from member namesRemoving leading `../' from member names
+[0.885s] 
+[0.885s] tar: tar: ../bus: Cannot stat../bus_stop: Cannot stattar: Exiting with failure status due to previous errors
+[0.885s] : No such file or directory: No such file or directory
+[0.886s] 
+[0.886s] tar: Removing leading `../' from member names
+[0.886s] tar: ../cabinet: Cannot stat: No such file or directory
+[0.886s] gmake[2]: *** [CMakeFiles/breakable_test.dir/build.make:71: CMakeFiles/breakable_test] Error 2
+[0.886s] gmake[2]: *** [CMakeFiles/box_target_red.dir/build.make:71: CMakeFiles/box_target_red] Error 2
+[0.887s] gmake[1]: *** [CMakeFiles/Makefile2:957: CMakeFiles/breakable_test.dir/all] Error 2
+[0.887s] gmake[1]: *** [CMakeFiles/Makefile2:931: CMakeFiles/box_target_red.dir/all] Error 2
+[0.887s] tar: Exiting with failure status due to previous errors
+[0.887s] gmake[2]: *** [CMakeFiles/brick_box_3x1x3.dir/build.make:71: CMakeFiles/brick_box_3x1x3] Error 2
+[0.887s] tar: tar: Removing leading `../' from member namesExiting with failure status due to previous errors
+[0.887s] 
+[0.887s] tar: ../cafe: Cannot stat: No such file or directory
+[0.887s] gmake[1]: *** [CMakeFiles/Makefile2:983: CMakeFiles/brick_box_3x1x3.dir/all] Error 2
+[0.887s] tar: Exiting with failure status due to previous errors
+[0.888s] gmake[2]: *** [CMakeFiles/bus_stop.dir/build.make:71: CMakeFiles/bus_stop] Error 2
+[0.888s] tar: Exiting with failure status due to previous errors
+[0.888s] gmake[1]: *** [CMakeFiles/Makefile2:1035: CMakeFiles/bus_stop.dir/all] Error 2
+[0.888s] gmake[2]: *** [CMakeFiles/bus.dir/build.make:71: CMakeFiles/bus] Error 2
+[0.888s] gmake[2]: *** [CMakeFiles/cabinet.dir/build.make:71: CMakeFiles/cabinet] Error 2
+[0.888s] gmake[1]: *** [CMakeFiles/Makefile2:1009: CMakeFiles/bus.dir/all] Error 2
+[0.888s] gmake[1]: *** [CMakeFiles/Makefile2:1061: CMakeFiles/cabinet.dir/all] Error 2
+[0.888s] tar: Exiting with failure status due to previous errors
+[0.889s] gmake[2]: *** [CMakeFiles/cafe.dir/build.make:71: CMakeFiles/cafe] Error 2
+[0.889s] gmake[1]: *** [CMakeFiles/Makefile2:1087: CMakeFiles/cafe.dir/all] Error 2
+[0.889s] gmake: *** [Makefile:156: all] Error 2
+[0.894s] Invoked command in '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models' returned '2': /usr/bin/cmake --build /home/elena/Documentos/GitHub/IR2136/build/gazebo_models -- -j20 -l20

@@ -29,7 +29,7 @@ CONNECTION = "udp:127.0.0.1:14550"
 
 ALTITUDE_M = 10.0                 # takeoff altitude
 FORWARD_SPEED_MPS = 2.0           # forward speed while cruising
-PHOTO_EVERY_M = 10.0              # take photo each X meters traveled
+PHOTO_EVERY_M = 40.0              # take photo each X meters traveled
 SETPOINT_HZ = 20.0                # send setpoints at 20Hz
 TAKEOFF_WAIT_S = 8.0              # time to stabilize after takeoff
 
@@ -221,6 +221,7 @@ class MVSPhotoMission(Node):
         self.last_xy: Optional[Tuple[float, float]] = None
         self.dist_accum = 0.0
         self.photo_idx = 0
+        self.first_photo_taken = False
 
         # Mission state machine
         self.phase = "INIT"
@@ -320,11 +321,11 @@ class MVSPhotoMission(Node):
         """
         GPS_RAW_INT provides lat, lon in 1e7 degrees, alt in mm.
         """
-        msg = self.m.recv_match(type="GPS_RAW_INT", blocking=False)
+        msg = self.m.recv_match(type="GLOBAL_POSITION_INT", blocking=False)
         if msg:
             lat = msg.lat / 1e7
             lon = msg.lon / 1e7
-            alt = msg.alt / 1000.0
+            alt = msg.relative_alt / 1000.0
             return lat, lon, alt
         return None
 
@@ -500,6 +501,17 @@ class MVSPhotoMission(Node):
                 self.get_logger().info("Starting straight cruise + photo capture + real-time detection ✅")
                 self.cruise_enabled = True
                 self.phase = "CRUISE"
+
+                # 📸 Foto inicial
+                if not self.first_photo_taken and self.last_local is not None:
+                    x, y, z = self.last_local
+                    self.save_photo(x, y, z)
+                    self.first_photo_taken = True
+
+                    # Inicializar contador de distancia
+                    self.last_xy = (x, y)
+                    self.dist_accum = 0.0
+
             return
 
         if self.phase == "CRUISE":

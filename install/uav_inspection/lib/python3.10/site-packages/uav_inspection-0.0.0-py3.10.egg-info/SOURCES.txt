@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+../../build/uav_inspection/uav_inspection.egg-info/PKG-INFO
+../../build/uav_inspection/uav_inspection.egg-info/SOURCES.txt
+../../build/uav_inspection/uav_inspection.egg-info/dependency_links.txt
+../../build/uav_inspection/uav_inspection.egg-info/requires.txt
+../../build/uav_inspection/uav_inspection.egg-info/top_level.txt
+../../build/uav_inspection/uav_inspection.egg-info/zip-safe
+resource/uav_inspection
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+uav_inspection/__init__.py

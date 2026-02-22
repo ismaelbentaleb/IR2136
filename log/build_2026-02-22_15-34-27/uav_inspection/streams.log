@@ -1,0 +1,28 @@
+[0.599s] Invoking command in '/home/elena/Documentos/GitHub/IR2136/src/uav_inspection': PYTHONPATH=/home/elena/Documentos/GitHub/IR2136/build/uav_inspection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/uav_inspection build --build-base /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build install --record /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/install.log --single-version-externally-managed install_data
+[0.726s] running egg_info
+[0.733s] creating ../../build/uav_inspection/uav_inspection.egg-info
+[0.733s] writing ../../build/uav_inspection/uav_inspection.egg-info/PKG-INFO
+[0.734s] writing dependency_links to ../../build/uav_inspection/uav_inspection.egg-info/dependency_links.txt
+[0.734s] writing requirements to ../../build/uav_inspection/uav_inspection.egg-info/requires.txt
+[0.734s] writing top-level names to ../../build/uav_inspection/uav_inspection.egg-info/top_level.txt
+[0.734s] writing manifest file '../../build/uav_inspection/uav_inspection.egg-info/SOURCES.txt'
+[0.749s] reading manifest file '../../build/uav_inspection/uav_inspection.egg-info/SOURCES.txt'
+[0.750s] writing manifest file '../../build/uav_inspection/uav_inspection.egg-info/SOURCES.txt'
+[0.750s] running build
+[0.750s] running build_py
+[0.750s] creating /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build/lib/uav_inspection
+[0.750s] copying uav_inspection/__init__.py -> /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build/lib/uav_inspection
+[0.750s] running install
+[0.752s] running install_lib
+[0.760s] creating /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection
+[0.760s] copying /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build/lib/uav_inspection/__init__.py -> /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection
+[0.760s] byte-compiling /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection/__init__.py to __init__.cpython-310.pyc
+[0.760s] running install_data
+[0.760s] creating /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/share/ament_index/resource_index/packages
+[0.760s] copying resource/uav_inspection -> /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/share/ament_index/resource_index/packages
+[0.760s] copying package.xml -> /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/share/uav_inspection
+[0.760s] running install_egg_info
+[0.768s] Copying ../../build/uav_inspection/uav_inspection.egg-info to /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection-0.0.0-py3.10.egg-info
+[0.769s] running install_scripts
+[0.784s] writing list of installed files to '/home/elena/Documentos/GitHub/IR2136/build/uav_inspection/install.log'
+[0.799s] Invoked command in '/home/elena/Documentos/GitHub/IR2136/src/uav_inspection' returned '0': PYTHONPATH=/home/elena/Documentos/GitHub/IR2136/build/uav_inspection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/uav_inspection build --build-base /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build install --record /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/install.log --single-version-externally-managed install_data

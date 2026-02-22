@@ -1,0 +1,160 @@
+[0.000000] (-) TimerEvent: {}
+[0.000688] (gazebo_models) JobQueued: {'identifier': 'gazebo_models', 'dependencies': OrderedDict()}
+[0.000812] (uav_bridge) JobQueued: {'identifier': 'uav_bridge', 'dependencies': OrderedDict()}
+[0.000842] (uav_inspection) JobQueued: {'identifier': 'uav_inspection', 'dependencies': OrderedDict()}
+[0.000863] (uav_mission) JobQueued: {'identifier': 'uav_mission', 'dependencies': OrderedDict()}
+[0.000882] (gazebo_models) JobStarted: {'identifier': 'gazebo_models'}
+[0.007775] (uav_bridge) JobStarted: {'identifier': 'uav_bridge'}
+[0.018522] (uav_inspection) JobStarted: {'identifier': 'uav_inspection'}
+[0.025578] (uav_mission) JobStarted: {'identifier': 'uav_mission'}
+[0.034952] (gazebo_models) JobProgress: {'identifier': 'gazebo_models', 'progress': 'cmake'}
+[0.035383] (gazebo_models) Command: {'cmd': ['/usr/bin/cmake', '/home/elena/Documentos/GitHub/IR2136/gazebo_models-master', '-DCMAKE_INSTALL_PREFIX=/home/elena/Documentos/GitHub/IR2136/install/gazebo_models'], 'cwd': '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'elena'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/elena'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '12113'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/elena/Documentos/GitHub/IR2136/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'elena'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'elena'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/elena/.local/bin:/usr/lib/ccache:/home/elena/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/elena/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/elena:@/tmp/.ICE-unix/2571,unix/elena:/tmp/.ICE-unix/2571'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/126cea76_780b_4c2f_a04b_7aae2da89895'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.0TQ0K3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.239'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/elena/Documentos/GitHub/IR2136/install/uav_mission:/home/elena/Documentos/GitHub/IR2136/install/uav_inspection:/home/elena/Documentos/GitHub/IR2136/install/uav_bridge:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GAZEBO_MODEL_DATABASE_URI', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/humble/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages:/home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages:/home/elena/Documentos/GitHub/IR2136/install/uav_bridge/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.100168] (-) TimerEvent: {}
+[0.200835] (-) TimerEvent: {}
+[0.301465] (-) TimerEvent: {}
+[0.402079] (-) TimerEvent: {}
+[0.502497] (-) TimerEvent: {}
+[0.540477] (gazebo_models) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.541355] (gazebo_models) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.541487] (gazebo_models) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.541575] (gazebo_models) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.541659] (gazebo_models) StdoutLine: {'line': b'-- Check for working C compiler: /usr/lib/ccache/cc - skipped\n'}
+[0.541877] (gazebo_models) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.541999] (gazebo_models) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.542091] (gazebo_models) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.542170] (gazebo_models) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.542250] (gazebo_models) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped\n'}
+[0.542330] (gazebo_models) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.542413] (gazebo_models) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.542494] (gazebo_models) StdoutLine: {'line': b'-- Install path: /home/elena/Documentos/GitHub/IR2136/install/gazebo_models/models\n'}
+[0.542568] (gazebo_models) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.542648] (gazebo_models) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[0.543130] (gazebo_models) StderrLine: {'line': b'  Compatibility with CMake < 2.8.12 will be removed from a future version of\n'}
+[0.543761] (gazebo_models) StderrLine: {'line': b'  CMake.\n'}
+[0.543863] (gazebo_models) StderrLine: {'line': b'\n'}
+[0.543948] (gazebo_models) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[0.544026] (gazebo_models) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[0.544095] (gazebo_models) StderrLine: {'line': b'\n'}
+[0.544164] (gazebo_models) StderrLine: {'line': b'\x1b[0m\n'}
+[0.590390] (gazebo_models) StdoutLine: {'line': b'-- Generating done\n'}
+[0.602744] (-) TimerEvent: {}
+[0.633621] (gazebo_models) StdoutLine: {'line': b'-- Build files have been written to: /home/elena/Documentos/GitHub/IR2136/build/gazebo_models\n'}
+[0.702800] (-) TimerEvent: {}
+[0.781115] (gazebo_models) CommandEnded: {'returncode': 0}
+[0.782149] (gazebo_models) JobProgress: {'identifier': 'gazebo_models', 'progress': 'build'}
+[0.783933] (gazebo_models) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models', '--', '-j20', '-l20'], 'cwd': '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'elena'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/elena'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '12113'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/elena/Documentos/GitHub/IR2136/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'elena'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'elena'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/elena/.local/bin:/usr/lib/ccache:/home/elena/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/elena/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/elena:@/tmp/.ICE-unix/2571,unix/elena:/tmp/.ICE-unix/2571'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/126cea76_780b_4c2f_a04b_7aae2da89895'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.0TQ0K3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.239'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/elena/Documentos/GitHub/IR2136/install/uav_mission:/home/elena/Documentos/GitHub/IR2136/install/uav_inspection:/home/elena/Documentos/GitHub/IR2136/install/uav_bridge:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GAZEBO_MODEL_DATABASE_URI', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/humble/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages:/home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages:/home/elena/Documentos/GitHub/IR2136/install/uav_bridge/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800')]), 'shell': False}
+[0.803017] (-) TimerEvent: {}
+[0.873255] (gazebo_models) StderrLine: {'line': b"tar: tar: Removing leading `../' from member namestar: Removing leading `../' from member namesRemoving leading `../' from member names\n"}
+[0.873974] (gazebo_models) StderrLine: {'line': b'\n'}
+[0.874086] (gazebo_models) StderrLine: {'line': b'\n'}
+[0.874183] (gazebo_models) StderrLine: {'line': b"tar: ../apartment: Cannot stattar: ../arrow_red: Cannot stattar: Removing leading `../' from member names\n"}
+[0.874279] (gazebo_models) StderrLine: {'line': b'tar: ../apollo15_landing_site_1000x1000: Cannot stat: No such file or directory: No such file or directory\n'}
+[0.874365] (gazebo_models) StderrLine: {'line': b'\n'}
+[0.874448] (gazebo_models) StderrLine: {'line': b': No such file or directory\n'}
+[0.875065] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[0.875444] (gazebo_models) StderrLine: {'line': b'tar: ../arm_part: Cannot stat: No such file or directory\n'}
+[0.875525] (gazebo_models) StderrLine: {'line': b'tar: ../beer: Cannot stat: No such file or directory\n'}
+[0.875598] (gazebo_models) StderrLine: {'line': b"tar: tar: Removing leading `../' from member names\n"}
+[0.875668] (gazebo_models) StderrLine: {'line': b'tar: ../asus_xtion_pro_camera: Cannot stat: No such file or directory\n'}
+[0.875751] (gazebo_models) StderrLine: {'line': b"Removing leading `../' from member names\n"}
+[0.875826] (gazebo_models) StderrLine: {'line': b'tar: ../ambulance: Cannot stattar: : No such file or directory\n'}
+[0.875909] (gazebo_models) StderrLine: {'line': b'Exiting with failure status due to previous errors\n'}
+[0.875988] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[0.877176] (gazebo_models) StderrLine: {'line': b'tar: ../bin_4_dropping_task: Cannot statgmake[2]: *** [CMakeFiles/arrow_red.dir/build.make:71: CMakeFiles/arrow_red] Error 2\n'}
+[0.877284] (gazebo_models) StderrLine: {'line': b': No such file or directory\n'}
+[0.877363] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.877438] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[0.877513] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.877596] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ambulance.dir/build.make:71: CMakeFiles/ambulance] Error 2\n'}
+[0.877679] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/arm_part.dir/build.make:71: CMakeFiles/arm_part] Error 2\n'}
+[0.877771] (gazebo_models) StderrLine: {'line': b'tar: tar: ../ball_bearing: Cannot statExiting with failure status due to previous errors\n'}
+[0.877848] (gazebo_models) StderrLine: {'line': b'tar: : No such file or directoryExiting with failure status due to previous errors\n'}
+[0.877923] (gazebo_models) StderrLine: {'line': b'\n'}
+[0.877998] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/apollo15_landing_site_1000x1000.dir/build.make:71: CMakeFiles/apollo15_landing_site_1000x1000] Error 2\n'}
+[0.878077] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/apartment.dir/build.make:71: CMakeFiles/apartment] Error 2\n'}
+[0.878154] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.878242] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.878324] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/asus_xtion_pro_camera.dir/build.make:71: CMakeFiles/asus_xtion_pro_camera] Error 2\n'}
+[0.879346] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/beer.dir/build.make:71: CMakeFiles/beer] Error 2\n'}
+[0.879569] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[0.879679] (gazebo_models) StderrLine: {'line': b'tar: ../asphalt_plane: Cannot stat: No such file or directory\n'}
+[0.879797] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[0.879900] (gazebo_models) StderrLine: {'line': b'tar: ../bookshelf: Cannot stat: No such file or directory\n'}
+[0.879994] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.880079] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[0.880307] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ball_bearing.dir/build.make:71: CMakeFiles/ball_bearing] Error 2\n'}
+[0.880431] (gazebo_models) StderrLine: {'line': b'tar: ../box_target_green: Cannot stat: No such file or directory\n'}
+[0.880550] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.880671] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.880950] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/bin_4_dropping_task.dir/build.make:71: CMakeFiles/bin_4_dropping_task] Error 2\n'}
+[0.881105] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/asphalt_plane.dir/build.make:71: CMakeFiles/asphalt_plane] Error 2\n'}
+[0.881237] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.881343] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[0.881445] (gazebo_models) StderrLine: {'line': b'tar: ../bowl: Cannot stat: No such file or directory\n'}
+[0.882125] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/bookshelf.dir/build.make:71: CMakeFiles/bookshelf] Error 2\n'}
+[0.882740] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:619: CMakeFiles/apartment.dir/all] Error 2\n'}
+[0.882891] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[0.882987] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:593: CMakeFiles/ambulance.dir/all] Error 2\n'}
+[0.883056] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:645: CMakeFiles/apollo15_landing_site_1000x1000.dir/all] Error 2\n'}
+[0.883137] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:671: CMakeFiles/arm_part.dir/all] Error 2\n'}
+[0.883219] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:697: CMakeFiles/arrow_red.dir/all] Error 2\n'}
+[0.883289] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:723: CMakeFiles/asphalt_plane.dir/all] Error 2\n'}
+[0.883375] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:749: CMakeFiles/asus_xtion_pro_camera.dir/all] Error 2\n'}
+[0.883454] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:801: CMakeFiles/beer.dir/all] Error 2\n'}
+[0.883604] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:775: CMakeFiles/ball_bearing.dir/all] Error 2\n'}
+[0.884056] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:827: CMakeFiles/bin_4_dropping_task.dir/all] Error 2\n'}
+[0.884200] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:853: CMakeFiles/bookshelf.dir/all] Error 2\n'}
+[0.884317] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[0.884425] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member namestar: \n"}
+[0.884617] (gazebo_models) StderrLine: {'line': b'../box_target_red: Cannot stattar: ../breakable_test: Cannot stat: No such file or directory\n'}
+[0.884884] (gazebo_models) StderrLine: {'line': b': No such file or directory\n'}
+[0.885025] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.885080] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.885141] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/box_target_green.dir/build.make:71: CMakeFiles/box_target_green] Error 2\n'}
+[0.885195] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[0.885234] (gazebo_models) StderrLine: {'line': b'tar: ../brick_box_3x1x3: Cannot stat: No such file or directory\n'}
+[0.885278] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:905: CMakeFiles/box_target_green.dir/all] Error 2\n'}
+[0.885315] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/bowl.dir/build.make:71: CMakeFiles/bowl] Error 2\n'}
+[0.885356] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:879: CMakeFiles/bowl.dir/all] Error 2\n'}
+[0.885398] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.885748] (gazebo_models) StderrLine: {'line': b"tar: tar: Removing leading `../' from member namesRemoving leading `../' from member names\n"}
+[0.885978] (gazebo_models) StderrLine: {'line': b'\n'}
+[0.886099] (gazebo_models) StderrLine: {'line': b'tar: tar: ../bus: Cannot stat../bus_stop: Cannot stattar: Exiting with failure status due to previous errors\n'}
+[0.886240] (gazebo_models) StderrLine: {'line': b': No such file or directory: No such file or directory\n'}
+[0.886370] (gazebo_models) StderrLine: {'line': b'\n'}
+[0.886483] (gazebo_models) StderrLine: {'line': b"tar: Removing leading `../' from member names\n"}
+[0.886893] (gazebo_models) StderrLine: {'line': b'tar: ../cabinet: Cannot stat: No such file or directory\n'}
+[0.887132] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/breakable_test.dir/build.make:71: CMakeFiles/breakable_test] Error 2\n'}
+[0.887270] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/box_target_red.dir/build.make:71: CMakeFiles/box_target_red] Error 2\n'}
+[0.887376] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:957: CMakeFiles/breakable_test.dir/all] Error 2\n'}
+[0.887474] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:931: CMakeFiles/box_target_red.dir/all] Error 2\n'}
+[0.887633] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.887769] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/brick_box_3x1x3.dir/build.make:71: CMakeFiles/brick_box_3x1x3] Error 2\n'}
+[0.887872] (gazebo_models) StderrLine: {'line': b"tar: tar: Removing leading `../' from member namesExiting with failure status due to previous errors\n"}
+[0.887971] (gazebo_models) StderrLine: {'line': b'\n'}
+[0.888074] (gazebo_models) StderrLine: {'line': b'tar: ../cafe: Cannot stat: No such file or directory\n'}
+[0.888173] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:983: CMakeFiles/brick_box_3x1x3.dir/all] Error 2\n'}
+[0.888261] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.888373] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/bus_stop.dir/build.make:71: CMakeFiles/bus_stop] Error 2\n'}
+[0.888480] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.888602] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:1035: CMakeFiles/bus_stop.dir/all] Error 2\n'}
+[0.888749] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/bus.dir/build.make:71: CMakeFiles/bus] Error 2\n'}
+[0.888989] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/cabinet.dir/build.make:71: CMakeFiles/cabinet] Error 2\n'}
+[0.889104] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:1009: CMakeFiles/bus.dir/all] Error 2\n'}
+[0.889189] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:1061: CMakeFiles/cabinet.dir/all] Error 2\n'}
+[0.889310] (gazebo_models) StderrLine: {'line': b'tar: Exiting with failure status due to previous errors\n'}
+[0.889399] (gazebo_models) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/cafe.dir/build.make:71: CMakeFiles/cafe] Error 2\n'}
+[0.889482] (gazebo_models) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:1087: CMakeFiles/cafe.dir/all] Error 2\n'}
+[0.889681] (gazebo_models) StderrLine: {'line': b'gmake: *** [Makefile:156: all] Error 2\n'}
+[0.894639] (gazebo_models) CommandEnded: {'returncode': 2}
+[0.895568] (gazebo_models) JobEnded: {'identifier': 'gazebo_models', 'rc': 2}
+[0.903275] (-) TimerEvent: {}
+[1.004090] (-) TimerEvent: {}
+[1.104577] (-) TimerEvent: {}
+[1.205276] (-) TimerEvent: {}
+[1.305625] (-) TimerEvent: {}
+[1.388735] (uav_inspection) JobEnded: {'identifier': 'uav_inspection', 'rc': 'SIGINT'}
+[1.390420] (uav_bridge) JobEnded: {'identifier': 'uav_bridge', 'rc': 'SIGINT'}
+[1.405902] (-) TimerEvent: {}
+[1.419495] (uav_mission) JobEnded: {'identifier': 'uav_mission', 'rc': 'SIGINT'}
+[1.430390] (-) EventReactorShutdown: {}

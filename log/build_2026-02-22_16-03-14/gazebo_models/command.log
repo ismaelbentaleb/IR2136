@@ -1,0 +1,4 @@
+Invoking command in '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models': /usr/bin/cmake /home/elena/Documentos/GitHub/IR2136/gazebo_models-master -DCMAKE_INSTALL_PREFIX=/home/elena/Documentos/GitHub/IR2136/install/gazebo_models
+Invoked command in '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models' returned '0': /usr/bin/cmake /home/elena/Documentos/GitHub/IR2136/gazebo_models-master -DCMAKE_INSTALL_PREFIX=/home/elena/Documentos/GitHub/IR2136/install/gazebo_models
+Invoking command in '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models': /usr/bin/cmake --build /home/elena/Documentos/GitHub/IR2136/build/gazebo_models -- -j20 -l20
+Invoked command in '/home/elena/Documentos/GitHub/IR2136/build/gazebo_models' returned '2': /usr/bin/cmake --build /home/elena/Documentos/GitHub/IR2136/build/gazebo_models -- -j20 -l20
