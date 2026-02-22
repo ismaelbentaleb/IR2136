@@ -21,6 +21,8 @@ from cv_bridge import CvBridge
 import cv2
 from pymavlink import mavutil
 
+from rclpy.qos import qos_profile_sensor_data, QoSProfile, DurabilityPolicy, HistoryPolicy, ReliabilityPolicy
+
 
 # =========================
 # CONFIG (Flight + Photos)
@@ -189,8 +191,40 @@ class MVSPhotoMission(Node):
         self.create_subscription(Image, CAMERA_TOPIC, self.image_cb, 10)
 
         # --- ROS pubs for incidents ---
-        self.incident_pub = self.create_publisher(String, "/incidents/json", 10)
-        self.incident_img_pub = self.create_publisher(Image, "/incidents/image", 10)
+        # --- QoS CONFIG ---
+
+        # annotated: streaming rápido (NO latched, sin delay)
+        annotated_qos = QoSProfile(
+            history=HistoryPolicy.KEEP_LAST,
+            depth=1,
+            reliability=ReliabilityPolicy.RELIABLE,
+            durability=DurabilityPolicy.TRANSIENT_LOCAL
+        )
+        
+        incident_qos = QoSProfile(
+            history=HistoryPolicy.KEEP_LAST,
+            depth=1,
+            reliability=ReliabilityPolicy.RELIABLE,
+            durability=DurabilityPolicy.TRANSIENT_LOCAL
+        )
+
+        self.annotated_img_pub = self.create_publisher(
+            Image,
+            "/annotated/image",
+            annotated_qos
+        )
+
+        self.incident_img_pub = self.create_publisher(
+            Image,
+            "/incidents/image",
+            incident_qos
+        )
+
+        self.incident_pub = self.create_publisher(
+            String,
+            "/incidents/json",
+            incident_qos
+        )
 
         # --- detector settings ---
         self.diff_thr = DIFF_THR
@@ -236,6 +270,9 @@ class MVSPhotoMission(Node):
 
         # Warmup setpoints
         self._warmup_sent = 0
+        
+        #landing
+        self.landing_started = False
 
     # =========================
     # ROS callbacks
@@ -343,7 +380,7 @@ class MVSPhotoMission(Node):
             now_ms,
             self.m.target_system,
             self.m.target_component,
-            mavutil.mavlink.MAV_FRAME_BODY_NED,
+            mavutil.mavlink.MAV_FRAME_LOCAL_NED,
             type_mask,
             0.0, 0.0, 0.0,
             vx, vy, vz,
@@ -409,6 +446,38 @@ class MVSPhotoMission(Node):
         self.csv_file.flush()
 
         self.get_logger().info(f"📸 Saved {fname} (every {PHOTO_EVERY_M}m)")
+        
+        # ✅ Publicar annotated SIEMPRE (aunque no haya baseline)
+        overlay_for_pub = cv_img.copy()
+        h, w = overlay_for_pub.shape[:2]
+        _, pts = polygon_mask(h, w, ROAD_POLY_REL)
+
+        cv2.polylines(overlay_for_pub, [pts], True, (0, 255, 255), 2)
+
+        cv2.putText(
+            overlay_for_pub,
+            "ANNOTATED",
+            (15, 30),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            0.7,
+            (255, 255, 255),
+            2
+        )
+
+        ann_msg = self.bridge.cv2_to_imgmsg(overlay_for_pub, encoding="bgr8")
+
+        # copiar header para que RViz no se raye
+        if self.last_image_msg is not None:
+            ann_msg.header = self.last_image_msg.header
+
+        self.annotated_img_pub.publish(ann_msg)
+        
+        # 🚁 If 6th photo → initiate landing
+        if self.photo_idx >= 6 and not self.landing_started:
+            self.get_logger().info("6th photo taken. Initiating landing...")
+            self.cruise_enabled = False
+            self.set_mode("LAND")
+            self.landing_started = True
 
         # --- REAL-TIME DETECTION ---
         base_path = self.baseline_map.get(self.photo_idx, None)
@@ -432,6 +501,10 @@ class MVSPhotoMission(Node):
         # Save annotated always (debug + demo)
         ann_path = os.path.join(ANNOTATED_DIR, fname)
         cv2.imwrite(ann_path, overlay)
+        
+        # ✅ Publicar SIEMPRE el overlay annotated
+        ann_msg = self.bridge.cv2_to_imgmsg(overlay, encoding="bgr8")
+        self.annotated_img_pub.publish(ann_msg)
 
         # Anti-spam by distance
         allow = True
@@ -476,7 +549,7 @@ class MVSPhotoMission(Node):
             return
 
         if self.cruise_enabled:
-            self.send_body_velocity_forward(FORWARD_SPEED_MPS, 0.0, 0.0)
+            self.send_body_velocity_forward(0.0, -FORWARD_SPEED_MPS, 0.0)
 
     def logic_loop(self):
         self.poll_local_position()
