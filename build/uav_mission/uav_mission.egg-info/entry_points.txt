@@ -1,2 +1,0 @@
-[console_scripts]
-mvs_straight_photo = uav_mission.mvs_straight_photo_node:main

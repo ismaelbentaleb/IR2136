@@ -28,6 +28,7 @@ setup(
     entry_points={
         'console_scripts': [
             'mvs_straight_photo = uav_mission.mvs_straight_photo_node:main',
+            'json_to_marker = uav_mission.nodes.json_to_marker:main', 
         ],
     },
 )

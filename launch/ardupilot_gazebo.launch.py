@@ -1,10 +1,7 @@
 import os
 from launch import LaunchDescription
 from launch.actions import ExecuteProcess, SetEnvironmentVariable, TimerAction
-from launch.actions import IncludeLaunchDescription
-from launch.launch_description_sources import PythonLaunchDescriptionSource
-from ament_index_python.packages import get_package_share_directory
-
+from launch_ros.actions import Node
 
 def generate_launch_description():
 
@@ -16,6 +13,10 @@ def generate_launch_description():
         ardupilot_gazebo,
         'worlds',
         'neighbourhood.world'
+    )
+
+    rviz_config = os.path.expanduser(
+        '~/Documentos/GitHub/IR2136/src/default_rviz.rviz'
     )
 
     # =====================
@@ -45,6 +46,28 @@ def generate_launch_description():
         output='screen'
     )
 
+    # =====================
+    # JSON -> Marker (ROS Node)
+    # =====================
+    json_to_marker = Node(
+        package='uav_mission',
+        executable='json_to_marker',
+        name='json_to_marker',
+        output='screen'
+    )
+
+    # =====================
+    # RViz2
+    # =====================
+    rviz2 = ExecuteProcess(
+        cmd=[
+            'rviz2',
+            '-d',
+            rviz_config
+        ],
+        output='screen'
+    )
+
     return LaunchDescription([
 
         # Variables de entorno necesarias
@@ -53,18 +76,28 @@ def generate_launch_description():
             value=os.path.join(ardupilot_gazebo, 'models')
         ),
 
+        # 🔥 IMPORTANTE: coherente con tu repo
         SetEnvironmentVariable(
-    		name='GAZEBO_PLUGIN_PATH',
-    		value=os.path.expanduser('~/ardupilot_gazebo/build/')
-		),
-
+            name='GAZEBO_PLUGIN_PATH',
+            value=os.path.expanduser('~/ardupilot_gazebo/build/')
+        ),
 
         # Orden correcto
         gazebo,
 
+        # Esperar a que Gazebo levante bien
         TimerAction(
-            period=5.0,
+            period=10.0,
             actions=[leader_sitl]
+        ),
+
+        # Levantar marker y rviz después
+        json_to_marker,
+        
+        TimerAction(
+            period=13.0,
+            actions=[rviz2]
         )
     ])
+
 

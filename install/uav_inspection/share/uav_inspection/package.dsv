@@ -1,6 +1,0 @@
-source;share/uav_inspection/hook/pythonpath.ps1
-source;share/uav_inspection/hook/pythonpath.dsv
-source;share/uav_inspection/hook/pythonpath.sh
-source;share/uav_inspection/hook/ament_prefix_path.ps1
-source;share/uav_inspection/hook/ament_prefix_path.dsv
-source;share/uav_inspection/hook/ament_prefix_path.sh
