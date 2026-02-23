@@ -1,0 +1,48 @@
+[0.315s] Invoking command in '/home/elena/Documentos/GitHub/IR2136/src/uav_mission': AMENT_PREFIX_PATH=/home/elena/Documentos/GitHub/IR2136/install/uav_inspection:/home/elena/Documentos/GitHub/IR2136/install/uav_mission:/home/elena/Documentos/GitHub/IR2136/install/uav_bridge:/opt/ros/humble PYTHONPATH=/home/elena/Documentos/GitHub/IR2136/build/uav_mission/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages:/home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages:/home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages:/home/elena/Documentos/GitHub/IR2136/install/uav_bridge/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/uav_mission build --build-base /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build install --record /home/elena/Documentos/GitHub/IR2136/build/uav_mission/install.log --single-version-externally-managed install_data
+[0.398s] /home/elena/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
+[0.398s]   warnings.warn(msg)
+[0.439s] running egg_info
+[0.446s] creating ../../build/uav_mission/uav_mission.egg-info
+[0.446s] writing ../../build/uav_mission/uav_mission.egg-info/PKG-INFO
+[0.446s] writing dependency_links to ../../build/uav_mission/uav_mission.egg-info/dependency_links.txt
+[0.446s] writing entry points to ../../build/uav_mission/uav_mission.egg-info/entry_points.txt
+[0.446s] writing requirements to ../../build/uav_mission/uav_mission.egg-info/requires.txt
+[0.446s] writing top-level names to ../../build/uav_mission/uav_mission.egg-info/top_level.txt
+[0.446s] writing manifest file '../../build/uav_mission/uav_mission.egg-info/SOURCES.txt'
+[0.460s] reading manifest file '../../build/uav_mission/uav_mission.egg-info/SOURCES.txt'
+[0.461s] writing manifest file '../../build/uav_mission/uav_mission.egg-info/SOURCES.txt'
+[0.461s] running build
+[0.461s] running build_py
+[0.461s] creating /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build/lib/uav_mission
+[0.461s] copying uav_mission/__init__.py -> /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build/lib/uav_mission
+[0.461s] copying uav_mission/mvs_straight_photo_node.py -> /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build/lib/uav_mission
+[0.461s] creating /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build/lib/uav_mission/nodes
+[0.461s] copying uav_mission/nodes/json_to_marker.py -> /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build/lib/uav_mission/nodes
+[0.461s] copying uav_mission/nodes/__init__.py -> /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build/lib/uav_mission/nodes
+[0.461s] copying uav_mission/nodes/mvs_straight_photo.py -> /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build/lib/uav_mission/nodes
+[0.462s] running install
+[0.464s] running install_lib
+[0.471s] creating /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission
+[0.471s] copying /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build/lib/uav_mission/__init__.py -> /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission
+[0.471s] copying /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build/lib/uav_mission/mvs_straight_photo_node.py -> /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission
+[0.471s] creating /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission/nodes
+[0.471s] copying /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build/lib/uav_mission/nodes/json_to_marker.py -> /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission/nodes
+[0.471s] copying /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build/lib/uav_mission/nodes/__init__.py -> /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission/nodes
+[0.471s] copying /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build/lib/uav_mission/nodes/mvs_straight_photo.py -> /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission/nodes
+[0.471s] byte-compiling /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission/__init__.py to __init__.cpython-310.pyc
+[0.471s] byte-compiling /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission/mvs_straight_photo_node.py to mvs_straight_photo_node.cpython-310.pyc
+[0.473s] byte-compiling /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission/nodes/json_to_marker.py to json_to_marker.cpython-310.pyc
+[0.473s] byte-compiling /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission/nodes/__init__.py to __init__.cpython-310.pyc
+[0.473s] byte-compiling /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission/nodes/mvs_straight_photo.py to mvs_straight_photo.cpython-310.pyc
+[0.475s] running install_data
+[0.475s] creating /home/elena/Documentos/GitHub/IR2136/install/uav_mission/share/ament_index/resource_index/packages
+[0.475s] copying resource/uav_mission -> /home/elena/Documentos/GitHub/IR2136/install/uav_mission/share/ament_index/resource_index/packages
+[0.475s] copying package.xml -> /home/elena/Documentos/GitHub/IR2136/install/uav_mission/share/uav_mission
+[0.475s] creating /home/elena/Documentos/GitHub/IR2136/install/uav_mission/share/uav_mission/launch
+[0.475s] copying launch/mission_full.launch.py -> /home/elena/Documentos/GitHub/IR2136/install/uav_mission/share/uav_mission/launch
+[0.475s] running install_egg_info
+[0.483s] Copying ../../build/uav_mission/uav_mission.egg-info to /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages/uav_mission-0.0.0-py3.10.egg-info
+[0.483s] running install_scripts
+[0.497s] Installing mvs_straight_photo script to /home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/uav_mission
+[0.497s] writing list of installed files to '/home/elena/Documentos/GitHub/IR2136/build/uav_mission/install.log'
+[0.509s] Invoked command in '/home/elena/Documentos/GitHub/IR2136/src/uav_mission' returned '0': AMENT_PREFIX_PATH=/home/elena/Documentos/GitHub/IR2136/install/uav_inspection:/home/elena/Documentos/GitHub/IR2136/install/uav_mission:/home/elena/Documentos/GitHub/IR2136/install/uav_bridge:/opt/ros/humble PYTHONPATH=/home/elena/Documentos/GitHub/IR2136/build/uav_mission/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages:/home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages:/home/elena/Documentos/GitHub/IR2136/install/uav_mission/lib/python3.10/site-packages:/home/elena/Documentos/GitHub/IR2136/install/uav_bridge/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/uav_mission build --build-base /home/elena/Documentos/GitHub/IR2136/build/uav_mission/build install --record /home/elena/Documentos/GitHub/IR2136/build/uav_mission/install.log --single-version-externally-managed install_data

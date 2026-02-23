@@ -12,3 +12,6 @@ test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 uav_inspection/__init__.py
+uav_inspection/incidents_reporter.py
+uav_inspection/mavlink_flight.py
+uav_inspection/vision_change_detector.py

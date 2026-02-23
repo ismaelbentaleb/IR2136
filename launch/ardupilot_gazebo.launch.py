@@ -45,19 +45,6 @@ def generate_launch_description():
         output='screen'
     )
 
-    # =====================
-    # Auto takeoff
-    # =====================
-    auto_takeoff = ExecuteProcess(
-        cmd=[
-            'python3',
-            os.path.expanduser(
-                '~/Documentos/GitHub/IR2136/mission_control/auto_takeoff.py'
-            )
-        ],
-        output='screen'
-    )
-
     return LaunchDescription([
 
         # Variables de entorno necesarias
@@ -78,11 +65,6 @@ def generate_launch_description():
         TimerAction(
             period=5.0,
             actions=[leader_sitl]
-        ),
-
-        TimerAction(
-            period=15.0,
-            actions=[auto_takeoff]
         )
     ])
 

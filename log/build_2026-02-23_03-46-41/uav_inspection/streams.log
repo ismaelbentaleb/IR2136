@@ -1,0 +1,40 @@
+[0.314s] Invoking command in '/home/elena/Documentos/GitHub/IR2136/src/uav_inspection': PYTHONPATH=/home/elena/Documentos/GitHub/IR2136/build/uav_inspection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/uav_inspection build --build-base /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build install --record /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/install.log --single-version-externally-managed install_data
+[0.396s] /home/elena/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
+[0.396s]   warnings.warn(msg)
+[0.437s] running egg_info
+[0.443s] creating ../../build/uav_inspection/uav_inspection.egg-info
+[0.443s] writing ../../build/uav_inspection/uav_inspection.egg-info/PKG-INFO
+[0.444s] writing dependency_links to ../../build/uav_inspection/uav_inspection.egg-info/dependency_links.txt
+[0.444s] writing requirements to ../../build/uav_inspection/uav_inspection.egg-info/requires.txt
+[0.444s] writing top-level names to ../../build/uav_inspection/uav_inspection.egg-info/top_level.txt
+[0.444s] writing manifest file '../../build/uav_inspection/uav_inspection.egg-info/SOURCES.txt'
+[0.458s] reading manifest file '../../build/uav_inspection/uav_inspection.egg-info/SOURCES.txt'
+[0.458s] writing manifest file '../../build/uav_inspection/uav_inspection.egg-info/SOURCES.txt'
+[0.458s] running build
+[0.458s] running build_py
+[0.458s] creating /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build/lib/uav_inspection
+[0.459s] copying uav_inspection/mavlink_flight.py -> /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build/lib/uav_inspection
+[0.459s] copying uav_inspection/__init__.py -> /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build/lib/uav_inspection
+[0.459s] copying uav_inspection/incidents_reporter.py -> /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build/lib/uav_inspection
+[0.459s] copying uav_inspection/vision_change_detector.py -> /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build/lib/uav_inspection
+[0.459s] running install
+[0.461s] running install_lib
+[0.468s] creating /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection
+[0.468s] copying /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build/lib/uav_inspection/mavlink_flight.py -> /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection
+[0.468s] copying /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build/lib/uav_inspection/__init__.py -> /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection
+[0.468s] copying /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build/lib/uav_inspection/incidents_reporter.py -> /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection
+[0.468s] copying /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build/lib/uav_inspection/vision_change_detector.py -> /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection
+[0.468s] byte-compiling /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection/mavlink_flight.py to mavlink_flight.cpython-310.pyc
+[0.469s] byte-compiling /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection/__init__.py to __init__.cpython-310.pyc
+[0.469s] byte-compiling /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection/incidents_reporter.py to incidents_reporter.cpython-310.pyc
+[0.469s] byte-compiling /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection/vision_change_detector.py to vision_change_detector.cpython-310.pyc
+[0.469s] running install_data
+[0.469s] creating /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/share/ament_index/resource_index/packages
+[0.470s] copying resource/uav_inspection -> /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/share/ament_index/resource_index/packages
+[0.470s] copying package.xml -> /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/share/uav_inspection
+[0.470s] creating /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/share/uav_inspection/launch
+[0.470s] running install_egg_info
+[0.477s] Copying ../../build/uav_inspection/uav_inspection.egg-info to /home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages/uav_inspection-0.0.0-py3.10.egg-info
+[0.478s] running install_scripts
+[0.492s] writing list of installed files to '/home/elena/Documentos/GitHub/IR2136/build/uav_inspection/install.log'
+[0.504s] Invoked command in '/home/elena/Documentos/GitHub/IR2136/src/uav_inspection' returned '0': PYTHONPATH=/home/elena/Documentos/GitHub/IR2136/build/uav_inspection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/elena/Documentos/GitHub/IR2136/install/uav_inspection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/uav_inspection build --build-base /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/build install --record /home/elena/Documentos/GitHub/IR2136/build/uav_inspection/install.log --single-version-externally-managed install_data
