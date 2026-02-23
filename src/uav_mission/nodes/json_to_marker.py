@@ -21,42 +21,35 @@ class JsonToMarker(Node):
         self.pub = self.create_publisher(Marker, "/incidents/marker", latched_qos)
 
         self.marker = Marker()
-        self.marker.header.frame_id = "map"   # <-- CAMBIO CLAVE
+        self.marker.header.frame_id = "map"
         self.marker.ns = "incidents"
         self.marker.id = 0
         self.marker.type = Marker.TEXT_VIEW_FACING
         self.marker.action = Marker.ADD
-
-        self.marker.pose.orientation.w = 1.0
         self.marker.pose.position.x = 0.0
         self.marker.pose.position.y = 0.0
-        self.marker.pose.position.z = 3.0       # un poco más alto
-
-        self.marker.scale.z = 4.0               # más grande
+        self.marker.pose.position.z = 2.0
+        self.marker.scale.z = 0.4
         self.marker.color.a = 1.0
         self.marker.color.r = 1.0
-        self.marker.color.g = 1.0               # blanco para que se vea siempre
+        self.marker.color.g = 1.0
         self.marker.color.b = 1.0
-
-        self.marker.lifetime.sec = 0            # 0 = infinito
 
     def cb(self, msg: String):
         try:
             d = json.loads(msg.data)
-            local = d.get("local", {})
+            gps = d.get("gps", {})
             score = d.get("score_percent", 0.0)
             photo = d.get("photo_file", "")
-
             self.marker.header.stamp = self.get_clock().now().to_msg()
             self.marker.text = (
-                f"INCIDENT\n"
-                f"{photo}\n"
+                f"INCIDENTE\n"
+                f"foto: {photo}\n"
                 f"score: {score:.2f}%\n"
-                f"x: {local.get('x', 0.0):.2f}\n"
-                f"y: {local.get('y', 0.0):.2f}\n"
-                f"z: {local.get('z', 0.0):.2f}"
+                f"lat: {gps.get('lat', 0.0):.7f}\n"
+                f"lon: {gps.get('lon', 0.0):.7f}\n"
+                f"alt: {gps.get('alt', 0.0):.2f}"
             )
-
             self.pub.publish(self.marker)
         except Exception as e:
             self.get_logger().warn(f"JSON inválido: {e}")

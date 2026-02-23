@@ -180,7 +180,7 @@ class MVSPhotoMission(Node):
         self.csv_writer = csv.writer(self.csv_file)
         # include local_x/y/z so you can visualize later if you want
         self.csv_writer.writerow([
-            "timestamp", "latitude", "longitude", "altitude",
+            "timestamp", 
             "local_x", "local_y", "local_z",
             "photo_file"
         ])
@@ -303,6 +303,80 @@ class MVSPhotoMission(Node):
         msg.data = json.dumps(payload)
         self.incident_pub.publish(msg)
 
+    def _append_incident_row(self, payload: dict):
+        """
+        Guarda un CSV y un HTML en INCIDENTS_DIR con SOLO las incidencias.
+        """
+        # --- CSV (solo incidencias) ---
+        csv_path = os.path.join(INCIDENTS_DIR, "incidents.csv")
+        new_file = not os.path.exists(csv_path)
+
+        with open(csv_path, "a", newline="") as f:
+            w = csv.writer(f)
+            if new_file:
+                w.writerow(["timestamp", "photo_file", "score_percent", "local_x", "local_y", "local_z"])
+            w.writerow([
+                f"{payload['timestamp']:.3f}",
+                payload["photo_file"],
+                f"{payload['score_percent']:.2f}",
+                f"{payload['local']['x']:.3f}",
+                f"{payload['local']['y']:.3f}",
+                f"{payload['local']['z']:.3f}",
+            ])
+    
+        # --- HTML (tabla con miniaturas) ---
+        self._write_incidents_index_html()
+
+
+    def _write_incidents_index_html(self):
+        """
+        Regenera incidents/index.html leyendo incidents.csv.
+        """
+        csv_path = os.path.join(INCIDENTS_DIR, "incidents.csv")
+        html_path = os.path.join(INCIDENTS_DIR, "index.html")
+
+        if not os.path.exists(csv_path):
+            return
+
+        rows = []
+        with open(csv_path, "r", newline="") as f:
+            r = csv.reader(f)
+            header = next(r, None)
+            for row in r:
+                if len(row) >= 6:
+                    rows.append(row)
+
+        # row = [timestamp, photo_file, score, x, y, z]
+        html = []
+        html.append("<!doctype html>")
+        html.append("<html><head><meta charset='utf-8'><title>Incidents</title>")
+        html.append("<style>")
+        html.append("body{font-family:Arial, sans-serif; margin:20px;}")
+        html.append("table{border-collapse:collapse; width:100%;}")
+        html.append("th,td{border:1px solid #ddd; padding:8px; text-align:left; vertical-align:top;}")
+        html.append("th{background:#f4f4f4;}")
+        html.append("img{max-width:320px; height:auto; display:block;}")
+        html.append("</style></head><body>")
+        html.append("<h2>Detected incidents</h2>")
+        html.append("<p>Only images where an incident was detected.</p>")
+        html.append("<table>")
+        html.append("<tr><th>Image</th><th>photo_file</th><th>score%</th><th>timestamp</th><th>local (x,y,z)</th></tr>")
+
+        for ts, photo_file, score, x, y, z in reversed(rows):
+            # Las imágenes están en la misma carpeta INCIDENTS_DIR, así que el src es directo
+            html.append("<tr>")
+            html.append(f"<td><a href='{photo_file}'><img src='{photo_file}'></a></td>")
+            html.append(f"<td>{photo_file}</td>")
+            html.append(f"<td>{score}</td>")
+            html.append(f"<td>{ts}</td>")
+            html.append(f"<td>({x}, {y}, {z})</td>")
+            html.append("</tr>")
+
+        html.append("</table></body></html>")
+
+        with open(html_path, "w") as f:
+            f.write("\n".join(html))
+            
     # =========================
     # MAVLink basic actions
     # =========================
@@ -426,20 +500,12 @@ class MVSPhotoMission(Node):
         fname = f"photo_{self.photo_idx:04d}_{int(ts)}.png"
         fpath = os.path.join(OUTPUT_DIR, fname)
 
-        # GPS
-        gps = self.poll_gps_position()
-        if gps:
-            lat, lon, alt = gps
-        else:
-            lat, lon, alt = 0.0, 0.0, 0.0
-
         # Save raw photo
         cv2.imwrite(fpath, cv_img)
 
         # Log CSV (with local pos too)
         self.csv_writer.writerow([
             f"{ts:.3f}",
-            f"{lat:.7f}", f"{lon:.7f}", f"{alt:.2f}",
             f"{x:.3f}", f"{y:.3f}", f"{z:.3f}",
             fname
         ])
@@ -524,11 +590,11 @@ class MVSPhotoMission(Node):
                 "photo_file": fname,
                 "baseline_file": os.path.basename(base_path),
                 "score_percent": float(score),
-                "gps": {"lat": float(lat), "lon": float(lon), "alt": float(alt)},
                 "local": {"x": float(x), "y": float(y), "z": float(z)},
                 "snapshot_path": inc_path
             }
 
+            self._append_incident_row(payload)
             # Publish JSON
             self._publish_incident(payload)
 
